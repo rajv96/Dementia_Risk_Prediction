@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dementia Risk Prediction</title>
+
+</head>
+<body style="background-color: #478559">
+    <div align="center" style="left: 50%;top:50%;position:absolute;transform : translate(-50%, -50%);background-color: #161748; width: 50%;color: white">
+
+        <br><br><br><br><br><br><br>
+
+        <form action="{{ url_for('predict') }}" method="post" id="login" >
+
+            <table>
+                <tr>
+                    <td>Age: </td>
+                    <td><input type="text" placeholder="Age" name="Age" required><br><br></td>
+                </tr>
+
+                <tr>
+                    <td>ASF: </td>
+                    <td><input type="text" placeholder="ASF" name="ASF" required><br><br></td>
+                </tr>
+
+                <tr>
+                    <td>nWBV: </td>
+                    <td><input type="text" placeholder="nWBV" name="nWBV" style="width: 100%" required><br><br></td>
+                </tr>
+
+                <tr>
+                    <td>eTIV: </td>
+                    <td><input type="text" placeholder="eTIV" name="eTIV" style="width: 100%" required><br><br></td>
+                </tr>
+
+                <tr>
+                    <td>Gender: </td>
+                    <td>
+                        <br>
+                        <label for="Male">
+                            <input type="radio" id="Male" placeholder="Male" name="Gender" value="Male" required />
+                            Male
+                        </label>
+                        <label for="Female">
+                            <input type="radio" id="Female" placeholder="Female" name="Gender" value="Female" required />
+                            Female
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Education Level: </td>
+                    <td>
+                        <br>
+                        <select name="Education level">
+
+                            <option value = "1">less than high school</option>
+                            <option value = "2">passed high school</option>
+                            <option value = "3">went to college</option>
+                            <option value = "4">college graduate</option>
+                            <option value = "5">beyond graduation</option>
+                        </select>
+                        <br><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>SES Level: </td>
+                    <td>
+                        <br>
+                        <select name="SES level">
+
+                            <option value = "1">lower class</option>
+                            <option value = "2">lower middle class</option>
+                            <option value = "3">middle class</option>
+                            <option value = "4">middle upper class</option>
+                            <option value = "5">upper class</option>
+                        </select>
+                        <br><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>MMSE Score: </td>
+                    <td><input type="text" placeholder="MMSE Score" name="MMSE Score" required><br><br></td>
+                </tr>
+            </table>
+            <input type="submit" placeholder="Predict Risk" name="risk" value="Predict Risk"><br>
+
+        <br><br>
+
+        {% if prediction_text == '0' %}
+            <p style="color: red"><b>"Alert!!!! The person is demented"</b></p>
+        {% elif prediction_text == '1' %}
+            <p style="color: green"><b>"The person is non demented"</b></p>
+        {% endif %}
+        </form>
+
+    <br><br><br><br><br><br><br>
+
+    </div>
+
+</body>
+</html>
