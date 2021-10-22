@@ -9,7 +9,7 @@ There is no cure for dementia yet; hence, the early identification of individual
 
 We intend to do a small service to hospitals, clinicians, nursing facilities and other healthcare practitioners by modelling a machine learning classification problem that helps in predicting the risk of Dementia given a certain set of features.
 
-The complete dataset details, methodology and model building details can be found in the 'Final_Report' pdf file.
+The complete dataset details, methodology and model building details in the [Project Report](https://github.com/rajv96/Dementia_Risk_Prediction/blob/main/Final_Report.pdf)
 
 The model is deployed on Heroku Cloud.
 
