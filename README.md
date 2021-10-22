@@ -11,7 +11,16 @@ We intend to do a small service to hospitals, clinicians, nursing facilities and
 
 The complete details regarding the dataset, methodology, EDA and model building can be found [here](https://github.com/rajv96/Dementia_Risk_Prediction/blob/main/Final_Report.pdf).
 
-The model is deployed on Heroku Cloud.
+The deployed model is available [here](https://dementia-risk-api.herokuapp.com/).
+
+### Team Members:
+1. Rajdatt Vernekar 
+2. Narasimha Bharadwaj C.
+3. Pathuri Venkata Poorna Sandeep
+4. Rajat Gupta
+5. Anukul Dixit
+
+
 
 
 
